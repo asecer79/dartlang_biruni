@@ -75,6 +75,11 @@ void main(List<String> args) {
   data2.remove(15);
   print("data2: $data2");
 
+  var data3 = {data1, data2};
+  print(data3);
+  var data4 = {...data1, ...data2};
+  print(data4);
+
   //Set<int> data3 = data1.intersection(data2);
 
   print("data1.intersection(data2): ${data1.intersection(data2)}");
@@ -83,15 +88,23 @@ void main(List<String> args) {
 
   //Maps
 
-  Map<int, String> jsondata = {12354:"Aydın Seçer",12356:"Ayşe Kara"};
+  Map<int, String> jsondata = {12354: "Aydın Seçer", 12356: "Ayşe Kara"};
   // [
-    
+
   //     {12354:"Aydın Seçer"},
-  //     {12356:"Ayşe Kara"}    
-    
+  //     {12356:"Ayşe Kara"}
+
   // ]
+  jsondata[12354] = "Ahmet";
+  print(jsondata[12354]);
 
+  for (var element in jsondata.entries) {
+    print(element);
+  }
 
-  
+  //List<int> myList = <int>[];
+   var myList = <int>[];
+   var mySet = <int>{};
+   var myMap = <int,String>{};
 
 }

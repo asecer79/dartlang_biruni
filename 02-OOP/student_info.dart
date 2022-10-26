@@ -48,9 +48,15 @@ class StudentInfo {
     this._department = department;
   }
 
+//factory constructors
 
-
-
+  factory StudentInfo.myFactory(bool fullCreate) {
+    if (fullCreate) {
+      return StudentInfo._withFull(12, "Ayşe", "Blg");
+    } else {
+      return StudentInfo();
+    }
+  }
 
   //n-event Members,
   //.......

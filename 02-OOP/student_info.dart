@@ -58,6 +58,10 @@ class StudentInfo {
     }
   }
 
+ //static members
+ 
+
+
   //n-event Members,
   //.......
 
